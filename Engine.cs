@@ -9,6 +9,7 @@ namespace CoolMathForGames
         private static bool _applicationShouldClose = false;
         private static int _currentSceneIndex;
         private Scene[] _scenes = new Scene[0];
+        private Actor _actor;
 
         //Called to begin the application
         public void Run() 
@@ -29,6 +30,7 @@ namespace CoolMathForGames
         //Called when the application starts
         private void Start() 
         {
+            _actor = new Actor('P', new MathLibrary.Vector2 { X = 0, Y = 0});
             _scenes[_currentSceneIndex].Start();
         }
 
